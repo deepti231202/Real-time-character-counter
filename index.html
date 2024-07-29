@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time character counter</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Real-time Character Counter</h2>
+        <textarea id="text" placeholder="Please write your text here..."></textarea>
+        <div class="count">
+            <span style="color: rgb(69, 66, 66);">Total Characters : <span id="totalcounts" style="color: rgb(164, 14, 164);">0</span></span>
+            <span style="color: rgb(69, 66, 66);">Remaining : <span id="remainingcounts" style="color: red;">50</span></span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const textInput = document.getElementById("text");
+    const totalCount = document.getElementById("totalcounts");
+    const remainingCount = document.getElementById("remainingcounts");
+    const maxChars = 50;
+
+    textInput.addEventListener("input", function() {
+        const currentLength = textInput.value.length;
+        totalCount.textContent = currentLength;
+        remainingCount.textContent = maxChars - currentLength;
+    });
+});
+
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Character Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Real-time Character Counter</h2>
+        <textarea id="textInput" placeholder="Please write your text here..."></textarea>
+        <div class="counter">
+            <span>Total Characters: <span id="totalCount">0</span></span>
+            <span>Remaining: <span id="remainingCount">50</span></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h1>Contador de caracteres</h1>
+
+<form name="form_main">
+  <fieldset>
+    <legend>Contador</legend>
+    <label for="text">Texto:</label> <br>
+    <textarea name="text" id="text" cols="30" rows="10" oninput="countText()">
+    </textarea><br>
+    <label for="characters">Caracteres: </label>
+    <span id="characters"></span><br>
+    <label for="words">Palavras: </label>
+    <span id="words"></span><br>
+    <label for="rows">Linhas: </label>
+    <span id="rows"></span><br>
+  </fieldset>
+</form> -->
